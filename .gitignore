@@ -1,0 +1,8 @@
+# folders
+/target/
+
+# files
+*.der
+*.lic
+*.log
+*.pem

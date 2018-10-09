@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- http://testng.org/doc/documentation-main.html -->
+<!-- https://www.mkyong.com/unittest/testng-tutorial-5-suite-test/ -->
+
+<suite name="TestAll" verbose="3">
+    <!--
+    
+    <test name="service-licensing">
+        <classes>
+            <class name="net.tentakel.licensemanager.service.licensing.EncryptionManagerTest" />
+            <class name="net.tentakel.licensemanager.service.licensing.KeyManagerTest" />
+            <class name="net.tentakel.licensemanager.service.licensing.LicenseManagerTest" />
+            <class name="net.tentakel.licensemanager.service.licensing.PublicKeyServiceImplTest" />      
+        </classes>
+    </test>
+    
+    <test name="password-encryption">
+        <classes>
+            <class name="net.tentakel.licensemanager.service.utility.implementation.PasswordEncoderImplTest" />     
+        </classes>
+    </test>
+    -->
+</suite>

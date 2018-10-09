@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <h1>Create License</h1>
+        <!-- <form action="#" th:action="@{/rest/v1/get/users/create-user}" th:object="${user}" method="POST"> -->
+          <form action="#" th:action="@{/view/license/create-license}" th:object="${license}" method="POST">
+          <table>
+             <tr>
+                <td th:text="license.Version"></td>
+                <td>
+                  <input type="text" th:field="*{licenseVersion}" />
+                </td>
+            </tr>             
+            <tr>
+                <td>Select Type for License</td>
+                <td>
+		<select th:field="*{license.Type}" >
+        	<option th:each="r : ${allRoles}" th:value="${r.getRoleId()}" th:utext="${r.getRoleName()}" th:selected="${r}" ></option>                        
+                </select>                        
+                </td>
+            </tr>          
+            <tr>
+                <td th:text="license.date.Expiration"></td>
+                <td>
+                   <input type="date" th:field="*{licenseExpiration}" />
+                </td>
+            </tr> 
+            <tr>
+                <td th:text="license.email"></td>
+                <td>
+                  <input type="text" th:field="*{email}" />
+                </td>
+            </tr>              
+            <tr>
+                <td th:text="license.firstName"></td>
+                <td>
+                  <input type="text" th:field="*{firstName}" />
+                </td>
+            </tr>
+            <tr>
+                <td th:text="license.Number"></td>
+                <td>
+                  <input type="text" th:field="*{licenseNumber}" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                  <input type="submit" th:field="#{license.form.submit}"/> 
+                  <input type="reset" th:field="#{license.form.reset}"/>
+                </td>
+            </tr>
+
+          </table>  
+        </form>
+    </body>
+</html>
